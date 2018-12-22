@@ -7,13 +7,12 @@
 var wins = [0];
 var losses = [0];
 var guesses = 10;
-var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
-var guessChoices = [];
+
 
 // Captures key press 
 document.onkeypress = function(userGuess) {
   var userGuess = userGuess || window.key;
-  // var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+  var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
     charCode = userGuess.keyCode || userGuess.which;
     userChoiceText = String.fromCharCode(charCode);
 // console.log(userGuess)
@@ -22,6 +21,8 @@ document.onkeypress = function(userGuess) {
     // how to win and lose
     if (userChoiceText === computerChoice){
       (wins ++);
+      guesses = 10;
+      alert("one point!")
       
     }
     
@@ -29,18 +30,18 @@ document.onkeypress = function(userGuess) {
         (guesses--);
         
   }
-  console.log(userGuess)
-  console.log(computerChoice)
+  
   if (guesses === -1) {
     (losses ++);
-    // alert("end");
+   
     
   }
 
 if (guesses ===0) {
   guesses = 10;
   losses++;
-  guessChoices = []
+  
+  alert("lost!")
 
 }
 
@@ -50,4 +51,3 @@ if (guesses ===0) {
   document.getElementById("wins").innerHTML = wins;
   document.getElementById("losses").innerHTML = losses;
 }
-
