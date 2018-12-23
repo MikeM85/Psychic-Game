@@ -3,10 +3,6 @@
 
   }
 
-  ,navbar {
-      color:    blue;
-  }
-
 
   body {
     background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/passing-blue-sky-clouds-timelapse_wkxm3dxws__F0000.png");
@@ -15,14 +11,24 @@
 
  
   .container {
-    background-image: url("http://www.minddisorders.com/photos/brain-912.jpg");
-    
     width: 500px;
     height: auto;
-    z-index: 1;
-
     
-  } 
+  }
+
+    #box {
+        background-image: url("http://www.minddisorders.com/photos/brain-912.jpg");
+    }
+
+    h1 {
+        background: black;
+        color: blue;
+    }
+
+    h2 {
+        color: yellow;
+    }
+  
 
   p {
     text-align: center;
