@@ -18,7 +18,7 @@ document.onkeypress = function(userGuess) {
 // console.log(userGuess)
 
 
-    // how to win and lose
+    // how to win and lose, reset guesses after wining
     if (userChoiceText === computerChoice){
       (wins ++);
       guesses = 10;
@@ -36,7 +36,7 @@ document.onkeypress = function(userGuess) {
    
     
   }
-
+// reset if lost
 if (guesses ===0) {
   guesses = 10;
   losses++;
@@ -44,6 +44,7 @@ if (guesses ===0) {
   alert("lost!")
 
 }
+
 
   // how things get displayed
   document.getElementById("userChoiceText").innerHTML += userChoiceText;
